@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validation Form</title>
+</head>
+<body>
+    <fieldset style="background-color: lightgray;">
+    <form style="text-align: center;">
+        <h2>FORM</h2>
+        <!-- Full Name Field -->
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required pattern="[A-Za-z ]{2,}" title="Full name should contain only letters and spaces, with a minimum of 2 characters.">
+        <br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8" pattern="(?=.\d)(?=.[a-z])(?=.*[A-Z]).{8,}" title="Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, and one number.">
+        <br><br>
+
+        <!-- Phone Number Field -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="\d{10,15}" title="Phone number should be 10 to 15 digits long.">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    </fieldset>
+</body>
+</html>
